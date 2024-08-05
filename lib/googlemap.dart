@@ -40,20 +40,20 @@ class _MapPageState extends State<MapPage> {
             _mapController.complete(controller),
         initialCameraPosition: CameraPosition(
           target: _sourceLocation,
-          zoom: 13,
+          zoom: 25,
         ),
         markers: {
           if (_currentLocation != null)
             Marker(
               markerId: MarkerId("currentLocation"),
               icon: BitmapDescriptor.defaultMarkerWithHue(
-                  BitmapDescriptor.hueBlue),
+                  BitmapDescriptor.hueRed),
               position: _currentLocation!,
             ),
           Marker(
             markerId: MarkerId("sourceLocation"),
-            icon: BitmapDescriptor.defaultMarkerWithHue(
-                BitmapDescriptor.hueGreen),
+            icon:
+                BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueRed),
             position: _sourceLocation,
           ),
           Marker(
@@ -68,9 +68,12 @@ class _MapPageState extends State<MapPage> {
         // For simplicity, just showing distance on top of the map
         myLocationButtonEnabled: true,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _showDistance,
-        child: Icon(Icons.info),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(right: 23),
+        child: FloatingActionButton(
+          onPressed: _showDistance,
+          child: Icon(Icons.info),
+        ),
       ),
     );
   }
