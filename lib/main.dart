@@ -32,7 +32,31 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: MyApp());
+        home: MapPage(
+          // 'Restaurants': [
+          //   {
+          //     'latitude': '37.7749',
+          //     'longitude': '-122.4194',
+          //     'coverPhoto': 'sample1.jpg',
+          //     'name': 'The Great Restaurant',
+          //     'address': '123 Foodie Lane, San Francisco, CA'
+          //   },
+          //   {
+          //     'latitude': '37.7849',
+          //     'longitude': '-122.4094',
+          //     'coverPhoto': 'sample2.jpg',
+          //     'name': 'Another Delight',
+          //     'address': '456 Yum St, San Francisco, CA'
+          //   },
+          //   {
+          //     'latitude': '37.7949',
+          //     'longitude': '-122.3994',
+          //     'coverPhoto': 'sample3.jpg',
+          //     'name': 'Gourmet Haven',
+          //     'address': '789 Flavor Ave, San Francisco, CA'
+          //   }
+          // ]
+        ));
   }
 }
 
